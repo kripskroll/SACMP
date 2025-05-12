@@ -115,35 +115,19 @@ SACMP uses:
 
 ---
 
-### 📈 SACMP Memory Flow
+## 📈 SACMP Memory Flow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320">
-  <style>
-    .label { font: bold 14px sans-serif; fill: #333; }
-    .box { fill: #E6F0FF; stroke: #1A73E8; stroke-width: 1.5; }
-    .arrow { stroke: #1A73E8; stroke-width: 2; marker-end: url(#arrowhead); }
-  </style>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-            refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#1A73E8"/>
-    </marker>
-  </defs>
-
-  <rect x="20" y="100" width="160" height="60" class="box"/>
-  <rect x="220" y="100" width="160" height="60" class="box"/>
-  <rect x="420" y="100" width="160" height="60" class="box"/>
-  <rect x="620" y="100" width="80" height="60" class="box"/>
-
-  <text x="100" y="135" text-anchor="middle" class="label">Text Input</text>
-  <text x="300" y="125" text-anchor="middle" class="label">Embed + Sign</text>
-  <text x="500" y="125" text-anchor="middle" class="label">Store in Vector DB</text>
-  <text x="660" y="125" text-anchor="middle" class="label">Verify</text>
-
-  <line x1="180" y1="130" x2="220" y2="130" class="arrow"/>
-  <line x1="380" y1="130" x2="420" y2="130" class="arrow"/>
-  <line x1="580" y1="130" x2="620" y2="130" class="arrow"/>
-</svg>
+```text
++-------------+       +--------------------+       +-------------------------+       +------------------+
+|  Text Input |  -->  | Embed + Sign with  |  -->  |  Store in Vector DB     |  -->  |   Verify Entry   |
+|  ("User is  |       |  Agent Private Key |       |  (FAISS, Chroma, etc.)  |       |  with Public Key |
+|   happy")   |       |                    |       |                         |       |   at Retrieval   |
++-------------+       +--------------------+       +-------------------------+       +------------------+
+                          |                                           
+                          |                                                                              
+                          v
+             Signature = Sign(embedding + metadata, private_key)
+```
 
 ---
 
