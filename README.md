@@ -69,3 +69,14 @@ SACMP ties vector memories to a **specific agent identity**, ensuring cryptograp
 git clone https://github.com/yourname/sacmp.git
 cd sacmp
 pip install -r requirements.txt
+```
+
+---
+
+## 🧪 Quickstart
+
+```bash
+python examples/create_and_store_memory.py
+python examples/retrieve_and_verify.py
+```
+
