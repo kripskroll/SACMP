@@ -123,9 +123,9 @@ SACMP uses:
 |  ("User is  |  -->  |  Agent Private Key |  -->  |  (FAISS, Chroma, etc.)  |  -->  |  with Public Key |
 |   happy")   |       |                    |       |                         |       |   at Retrieval   |
 +-------------+       +--------------------+       +-------------------------+       +------------------+
-                            |                                           
-                            |                                                                              
-                            v
+                             |                                           
+                             |                                                                              
+                             v
              Signature = Sign(embedding + metadata, private_key)
 ```
 
