@@ -119,8 +119,8 @@ SACMP uses:
 
 ```text
 +-------------+       +--------------------+       +-------------------------+       +------------------+
-|  Text Input |  -->  | Embed + Sign with  |  -->  |  Store in Vector DB     |  -->  |   Verify Entry   |
-|  ("User is  |       |  Agent Private Key |       |  (FAISS, Chroma, etc.)  |       |  with Public Key |
+|  Text Input |       | Embed + Sign with  |       |  Store in Vector DB     |       |   Verify Entry   |
+|  ("User is  |  -->  |  Agent Private Key |  -->  |  (FAISS, Chroma, etc.)  |  -->  |  with Public Key |
 |   happy")   |       |                    |       |                         |       |   at Retrieval   |
 +-------------+       +--------------------+       +-------------------------+       +------------------+
                           |                                           
