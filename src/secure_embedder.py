@@ -3,6 +3,9 @@ from src.memory_entry import MemoryEntry
 from src.signer import load_private_key, sign_message
 
 class SecureEmbedder:
+    # This class is responsible for embedding text and signing the resulting vector
+    # with a private key. It uses a placeholder embedding method for demonstration.
+    # In a real-world scenario, you would replace this with an actual embedding model.
     def __init__(self, private_key_path):
         self.private_key = load_private_key(private_key_path)
 
