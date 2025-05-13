@@ -1,4 +1,5 @@
 import hashlib
+from src.memory_entry import MemoryEntry
 from src.signer import load_private_key, sign_message
 
 class SecureEmbedder:
